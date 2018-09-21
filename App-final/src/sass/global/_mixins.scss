@@ -1,0 +1,95 @@
+@mixin ghost() {
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    //width: .1px;
+  }
+
+  > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin tablet-landscape {
+  @media all and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media all and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media all and (max-width: 520px) {
+    @content;
+  }
+}
+
+@mixin retina-screen {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+
+    @content;
+  }
+}
+
+@mixin position($position: relative, $coordinates: null null null null) {
+
+  @if type-of($position) == list {
+    $coordinates: $position;
+    $position: relative;
+  }
+
+  $coordinates: unpack($coordinates);
+
+  $offsets: (
+          top:    nth($coordinates, 1),
+          right:  nth($coordinates, 2),
+          bottom: nth($coordinates, 3),
+          left:   nth($coordinates, 4)
+  );
+
+  position: $position;
+
+  @each $offset, $value in $offsets {
+    @if is-length($value) {
+      #{$offset}: $value;
+    }
+  }
+}
+
+// Convert shorthand to the 4-value syntax
+
+@function unpack($shorthand) {
+  @if length($shorthand) == 1 {
+    @return nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1) nth($shorthand, 1);
+  }
+  @else if length($shorthand) == 2 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 1) nth($shorthand, 2);
+  }
+  @else if length($shorthand) == 3 {
+    @return nth($shorthand, 1) nth($shorthand, 2) nth($shorthand, 3) nth($shorthand, 2);
+  }
+  @else {
+    @return $shorthand;
+  }
+}

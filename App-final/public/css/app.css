@@ -1,0 +1,572 @@
+/*
+	HTML5 Reset
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+/* let's clear some floats */
+
+.clear:before,
+.clear:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clear:after {
+  clear: both;
+}
+
+.clear {
+  zoom: 1;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  -webkit-transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  opacity: 0;
+}
+
+body {
+  background: #121212;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+}
+
+.card {
+  background-color: #000;
+  border-radius: 1.875rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  -webkit-box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.1875rem 1.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.left-panel {
+  color: #fff;
+  padding: 1.5rem;
+  background-color: red;
+  border-radius: 1.875rem 0 0 1.875rem;
+  text-align: center;
+}
+
+.right-panel-default {
+  color: #fff;
+  padding: 1.5rem;
+  position: relative;
+  background-color: yellow;
+  border-radius: 0 1.875rem 1.875rem 0;
+  text-align: left;
+}
+
+.right-panel-slide {
+  color: #fff;
+  padding: 1.5rem;
+  position: relative;
+  background-color: orange;
+  border-radius: 0 1.875rem 1.875rem 0;
+  text-align: left;
+}
+
+.slide-fade-enter-active {
+  -webkit-transition: all .30s ease;
+  transition: all .30s ease;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.right-panel-default:hover .overlay {
+  width: 100%;
+  left: 0;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+@media all and (max-width: 520px) {
+  body {
+    padding: 0;
+  }
+
+  .card {
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: 0 !important;
+    width: 100%;
+  }
+
+  .left-panel,
+  .right-panel-default,
+  .right-panel-slide {
+    border-radius: 0 !important;
+  }
+}
+
+input {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #374853;
+  line-height: 2.375rem;
+  min-height: 2.375rem;
+  position: relative;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+  background: #fff;
+  padding: 0 0.8125rem;
+  width: 100%;
+  -webkit-transition: border .1s ease;
+  transition: border .1s ease;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input.error,
+input.error:focus {
+  border-color: #f79483;
+}
+
+input.valid,
+input.valid:focus {
+  border-color: #41B883;
+}
+
+input:focus {
+  border-color: #a8a8a8;
+  outline: none;
+}
+
+label {
+  font-size: 0.8125rem;
+  color: #4b6372;
+  margin-bottom: 0.3125rem;
+  margin-left: 0.875rem;
+  display: block;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.error-message {
+  display: block;
+  color: #f57f6c;
+}
+
+h1 {
+  color: #374853;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #fff;
+  min-height: 2.5rem;
+  line-height: 1.4;
+  padding: 0.5rem 1.875rem 0.625rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  background: #41B883;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+  overflow: hidden;
+  outline: none;
+  vertical-align: middle;
+  -webkit-transition: 0.1s background ease, 0.1s border-color ease, 0.1s color ease;
+  transition: 0.1s background ease, 0.1s border-color ease, 0.1s color ease;
+  border-bottom: 3px solid #266d4d;
+  text-decoration: none;
+}
+
+button:hover,
+button:focus {
+  background: #349268;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ccc6c6;
+  border-bottom: 3px solid #b3b1b1;
+  cursor: not-allowed;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  font-size: 1.33333333em;
+  line-height: .75em;
+  vertical-align: -10%;
+  position: relative;
+  left: 5px;
+  color: #555 !important;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+input[type=checkbox]:before {
+  font-family: 'Font Awesome 5 Free' !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+input[type=checkbox]:before {
+  font-weight: 400;
+  content: "\F0C8";
+}
+
+input[type=checkbox]:checked:before {
+  font-weight: 900;
+  content: "\F14A";
+}
+
+.github-username {
+  position: relative;
+}
+
+.github-username .fa-spinner {
+  position: absolute;
+  top: 33px;
+  right: 10px;
+}
+

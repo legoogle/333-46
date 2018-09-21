@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Membership App</title>
+<link rel="stylesheet" type="text/css" href="css/app.css">
+<!-- <script type="js/libs/validators.min.js"></script>
+<script type="js/libs/validate.min.js"></script> -->
+
+</head>
+<body>
+<div id="app">
+
+    <h1>This is a Heading 3232</h1>
+    <p>This is a paragraph.</p> <br><br><br>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p> <br>
+    <div>
+        <button onclick="myFunction()">Try it</button>
+    </div>
+
+<div>
+    <button @click="show = !show">
+  Toggle render
+</button>
+
+
+</div>
+
+
+<div class="card">
+   <div class="left">
+   <div class="left-image">
+   				<img src="https://via.placeholder.com/100x100" width="100" height="100" alt="">
+   </div>
+   <div class="left-body-copy">
+      <h1>
+<!--     Front-end challenge!-->
+     Thiss-nht cnhsjdsaj!
+     </h1>
+      <p>
+<!--
+      This is the design that you will need
+      to code up and impress us.
+-->
+      Thes em der grhshgr she fhr dhg segd
+    th cbfv fb sds bvhdvh gh
+      </p>
+   </div>
+   <div class="left-footer">
+   <button @click="show = !show">
+   Arrow
+   </button>
+   </div>
+
+  </div>
+  <div class="right">
+      <div class="form-wrapper">
+          <from action="" method="post">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="user_name">
+              </div>
+              <div>
+                <label for="gender">Gender</label>
+                 <input type="radio" name="male" value="Male"> Male
+                 <input type="radio" name="female" value="Female"> Female
+              </div>
+              <div>
+                <label for="date-of-birth">Date of Birth</label>
+                <input type="email" id="mail" name="user_mail">
+              </div>
+              <div>
+                <label for="mail">Email</label>
+                <input type="email" id="mail" name="user_mail">
+              </div>
+               <div>
+                <label for="mobile-number">Mobile</label>
+                <input type="email" id="mail" name="user_mail">
+              </div>
+               <div>
+                <label for="customer-id">Customer ID</label>
+                <input type="email" id="mail" name="user_mail">
+              </div>
+              <div>
+                <label for="membership">Membership</label>
+                 <input type="radio" name="clasic" value="Classic"> Classic
+                 <input type="radio" name="silver" value="Silver"> Silver
+                 <input type="radio" name="gold" value="Gold"> Gold
+              </div>
+          </from>
+      </div>
+
+      <transition name="slide-fade">
+
+         <div v-if="!show" class="right-overlay">
+            {{  message }}
+          </div>
+      </transition>
+  </div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="js/main.js"></script>
+
+</script>
+
+<script>
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
+</script>
+
+</body>
+</html>
