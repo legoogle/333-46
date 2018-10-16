@@ -570,3 +570,9 @@ input[type=checkbox]:checked:before {
   right: 10px;
 }
 
+.note {
+  background: #e7f6f0;
+  border: 0.1rem solid #2ab27b;
+  padding: 2rem 2rem 2rem 7rem;
+}
+
