@@ -324,14 +324,14 @@ input {
   zoom: 1;
 }
 
-.animated {
+.animate {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
 
-.animated-slow {
+.animate-slow {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -689,7 +689,7 @@ input[type=checkbox]:checked:before {
 }
 
 .note {
-  background: #e7f6f0;
+  background: #293743;
   border: 0.1rem solid #2ab27b;
   padding: 2rem 2rem 2rem 7rem;
 }
